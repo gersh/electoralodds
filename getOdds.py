@@ -43,7 +43,7 @@ def getOdds(min_pct=0.01):
     odds = {}
     for v in data:
         if v in data and v in data2:
-            if data[v] > 0.01:
+            if data[v] > min_pct:
                 odds[v] = data[v]/data2[v]
     return odds
 
